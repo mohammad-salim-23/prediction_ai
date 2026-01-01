@@ -1,6 +1,7 @@
 "use client";
 import { useState } from 'react';
-
+import salim from "../images/SalimProfessiona.jpg";
+import ar from "../images/archita.jpeg";
 export default function Home() {
   const [formData, setFormData] = useState({ radius: '', texture: '', smoothness: '', compactness: '', concavity: '' });
   const [res, setRes] = useState(null);
@@ -141,12 +142,12 @@ const response = await fetch('https://prediction-ai-pee9.onrender.com/predict', 
             <div className="group text-center">
               <div className="relative inline-block">
                 <img 
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200&h=200" 
+                  src={salim}
                   alt="JD" 
                   className="w-48 h-48 rounded-[2.5rem] object-cover border-4 border-gray-800 transition-all group-hover:border-teal-500 group-hover:rotate-3 shadow-2xl mb-8 mx-auto"
                 />
               </div>
-              <h3 className="text-3xl font-bold mb-1 tracking-tight">John Doe</h3>
+              <h3 className="text-3xl font-bold mb-1 tracking-tight">Mohammad Salim</h3>
               <p className="text-teal-400 font-bold uppercase tracking-widest text-xs mb-6">Lead AI Scientist</p>
               <div className="h-0.5 w-12 bg-gray-700 mx-auto group-hover:w-24 transition-all duration-500"></div>
             </div>
@@ -155,12 +156,12 @@ const response = await fetch('https://prediction-ai-pee9.onrender.com/predict', 
             <div className="group text-center">
               <div className="relative inline-block">
                 <img 
-                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=200&h=200" 
+                  src={ar} 
                   alt="AS" 
                   className="w-48 h-48 rounded-[2.5rem] object-cover border-4 border-gray-800 transition-all group-hover:border-teal-500 group-hover:-rotate-3 shadow-2xl mb-8 mx-auto"
                 />
               </div>
-              <h3 className="text-3xl font-bold mb-1 tracking-tight">Alex Smith</h3>
+              <h3 className="text-3xl font-bold mb-1 tracking-tight">Archita Nath</h3>
               <p className="text-teal-400 font-bold uppercase tracking-widest text-xs mb-6">Full Stack Developer</p>
               <div className="h-0.5 w-12 bg-gray-700 mx-auto group-hover:w-24 transition-all duration-500"></div>
             </div>
