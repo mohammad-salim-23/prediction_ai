@@ -11,7 +11,7 @@ export default function Home() {
     setLoading(true);
     try {
      //changez
-const response = await fetch('https://prediction-ai-cancer-1.onrender.com/predict', { 
+const response = await fetch('https://prediction-ai-pee9.onrender.com/predict', { 
   method: 'POST',
   headers: { 'Content-Type': 'application/json' },
   body: JSON.stringify(formData),
