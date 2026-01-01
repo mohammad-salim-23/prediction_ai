@@ -141,7 +141,7 @@ const response = await fetch('https://prediction-ai-pee9.onrender.com/predict', 
             <div className="group text-center">
               <div className="relative inline-block">
                 <img 
-                  src="/public/SalimProfessiona.jpg"
+                  src="/SalimProfessiona.jpg"
                   alt="JD" 
                   className="w-48 h-48 rounded-[2.5rem] object-cover border-4 border-gray-800 transition-all group-hover:border-teal-500 group-hover:rotate-3 shadow-2xl mb-8 mx-auto"
                 />
@@ -155,7 +155,7 @@ const response = await fetch('https://prediction-ai-pee9.onrender.com/predict', 
             <div className="group text-center">
               <div className="relative inline-block">
                 <img 
-                  src="/public/archita.jpeg"
+                  src="/archita.jpeg"
                   alt="AS" 
                   className="w-48 h-48 rounded-[2.5rem] object-cover border-4 border-gray-800 transition-all group-hover:border-teal-500 group-hover:-rotate-3 shadow-2xl mb-8 mx-auto"
                 />
