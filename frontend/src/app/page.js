@@ -9,22 +9,31 @@ export default function Home() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
+    
     try {
-     //changez
-const response = await fetch('https://prediction-ai-pee9.onrender.com/predict', { 
-  method: 'POST',
-  headers: { 'Content-Type': 'application/json' },
-  body: JSON.stringify(formData),
-});
+      // ডেটাগুলোকে Float এ কনভার্ট করে পাঠানো হচ্ছে সঠিক ফলাফলের জন্য
+      const formattedData = {
+        radius: parseFloat(formData.radius),
+        texture: parseFloat(formData.texture),
+        smoothness: parseFloat(formData.smoothness),
+        compactness: parseFloat(formData.compactness),
+        concavity: parseFloat(formData.concavity)
+      };
+
+      const response = await fetch('https://prediction-ai-pee9.onrender.com/predict', { 
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formattedData), // এখানে formattedData ব্যবহার করুন
+      });
+
       const data = await response.json();
       setRes(data.result);
     } catch (error) {
-      alert("Error: Backend server (app.py) is not running!");
+      alert("Error: Backend server is not responding!");
+    } finally {
+      setLoading(false);
     }
-    setLoading(false);
-    console.log(formData);
-  };
-
+  }
   return (
     <main className="min-h-screen bg-white font-sans text-gray-900 scroll-smooth">
       
